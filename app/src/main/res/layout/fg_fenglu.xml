@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".fenglu.FengluFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/orange">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/distance_32"
+                android:layout_marginLeft="@dimen/distance_16"
+                android:layout_marginTop="@dimen/distance_8"
+                android:layout_marginBottom="@dimen/distance_8"
+                android:layout_toLeftOf="@id/fenglu_tv_filtrate"
+                android:background="@drawable/et_search_bg">
+
+                <EditText
+                    android:id="@+id/fenglu_et_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/distance_30"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/distance_16"
+                    android:background="@null"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:hint="请输入商品名或店铺名"
+                    android:imeOptions="actionSearch"
+                    android:paddingRight="@dimen/distance_50"
+                    android:singleLine="true"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/color_font_hint"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="@dimen/distance_40"
+                    android:layout_height="@dimen/distance_40"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/distance_10"
+                    android:padding="@dimen/distance_6"
+                    android:src="@mipmap/fangdajing" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/fenglu_tv_filtrate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/distance_16"
+                android:layout_marginRight="@dimen/distance_24"
+                android:text="筛 选"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/font_18" />
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+
+</FrameLayout>

@@ -11,6 +11,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.envelope.R;
+import com.example.envelope.index.IndexActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -130,6 +131,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 break;
             //登录按钮
             case R.id.login_tv_lg:
+                // TODO: 2019/6/4 暂直接跳转主页面
+                Intent intentIndex = new Intent(LoginActivity.this, IndexActivity.class);
+                startActivity(intentIndex);
                 break;
             //微信登录
             case R.id.login_wx:

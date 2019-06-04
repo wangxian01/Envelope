@@ -11,11 +11,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <!--忘记密码页面-->
-        <activity android:name=".login.ForgetPwdActivity"
+        <!--主页-->
+        <activity android:name=".index.IndexActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:launchMode="singleTask"/>
+        <!-- 忘记密码页面 -->
+        <activity
+            android:name=".login.ForgetPwdActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
         <!-- 微信登录资料完善 -->
         <activity
             android:name=".login.WxLoginActivity"
