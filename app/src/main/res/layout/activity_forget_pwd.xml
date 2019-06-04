@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/default_bg"
+    android:orientation="vertical"
+    tools:context=".login.ForgetPwdActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/distance_40"
+        android:background="@color/colorOrange">
+
+        <ImageView
+            android:id="@+id/forget_img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/distance_16"
+            android:paddingRight="@dimen/distance_6"
+            android:src="@mipmap/ic_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="忘记密码"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/font_16" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/distance_60">
+
+            <EditText
+                android:id="@+id/forget_et_account"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/distance_16"
+                android:layout_marginRight="@dimen/distance_16"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@mipmap/shouji"
+                android:drawablePadding="@dimen/distance_8"
+                android:gravity="center_vertical"
+                android:hint="输入手机号"
+                android:inputType="number"
+                android:maxLength="11"
+                android:textColor="@color/colorBlack"
+                android:textColorHint="@color/color_font_hint"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/distance_1"
+                android:layout_gravity="bottom"
+                android:background="@color/main_bg" />
+        </FrameLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/distance_60">
+
+            <EditText
+                android:id="@+id/forget_et_vc"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/distance_16"
+                android:layout_toStartOf="@id/register_tv_getvc"
+                android:layout_toLeftOf="@id/register_tv_getvc"
+                android:background="@null"
+                android:drawableLeft="@mipmap/yanzhengma1"
+                android:drawablePadding="@dimen/distance_8"
+                android:hint="输入验证码"
+                android:inputType="text"
+                android:lines="1"
+                android:textColor="@color/color_black_tran_50"
+                android:textColorHint="@color/color_font_hint"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/forget_tv_getvc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/distance_16"
+                android:layout_marginRight="@dimen/distance_16"
+                android:background="@drawable/tv_getvc_bg"
+                android:clickable="true"
+                android:paddingLeft="@dimen/distance_10"
+                android:paddingTop="@dimen/distance_5"
+                android:paddingRight="@dimen/distance_10"
+                android:paddingBottom="@dimen/distance_5"
+                android:text="获取验证码"
+                android:textColor="@color/colorWhite" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/distance_1"
+                android:layout_alignParentBottom="true"
+                android:background="@color/main_bg" />
+        </RelativeLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/distance_60">
+
+            <EditText
+                android:id="@+id/forget_et_newpaw"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/distance_16"
+                android:layout_marginRight="@dimen/distance_16"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@mipmap/mima54"
+                android:drawablePadding="@dimen/distance_8"
+                android:gravity="center_vertical"
+                android:hint="输入新密码"
+                android:inputType="textPassword"
+                android:maxLength="18"
+                android:textColor="@color/colorBlack"
+                android:textColorHint="@color/color_font_hint"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/distance_1"
+                android:layout_gravity="bottom"
+                android:background="@color/main_bg" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/distance_60">
+
+            <EditText
+                android:id="@+id/forget_et_surepaw"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/distance_16"
+                android:layout_marginRight="@dimen/distance_16"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@mipmap/mima54"
+                android:drawablePadding="@dimen/distance_8"
+                android:gravity="center_vertical"
+                android:hint="确认密码"
+                android:inputType="textPassword"
+                android:maxLength="18"
+                android:textColor="@color/colorBlack"
+                android:textColorHint="@color/color_font_hint"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/distance_1"
+                android:layout_gravity="bottom"
+                android:background="@color/main_bg" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/forget_tv_sure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="@dimen/distance_60"
+        android:layout_marginTop="@dimen/distance_30"
+        android:layout_marginRight="@dimen/distance_60"
+        android:background="@drawable/bt_login_bg"
+        android:clickable="true"
+        android:gravity="center"
+        android:paddingTop="@dimen/distance_12"
+        android:paddingBottom="@dimen/distance_12"
+        android:text="确定"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/font_16" />
+</LinearLayout>
