@@ -97,6 +97,7 @@
     <dimen name="distance_210">210dp</dimen>
     <dimen name="distance_224">224dp</dimen>
     <dimen name="distance_230">230dp</dimen>
+    <dimen name="distance_240">240dp</dimen>
     <dimen name="distance_253">253dp</dimen>
     <dimen name="distance_260">260dp</dimen>
     <dimen name="distance_270">270dp</dimen>

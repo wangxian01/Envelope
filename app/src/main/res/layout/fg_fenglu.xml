@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/colorWhite"
     tools:context=".fenglu.FengluFragment">
 
@@ -66,7 +67,11 @@
 
         </RelativeLayout>
 
-
+        <com.youth.banner.Banner
+            android:id="@+id/fenglu_banner"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/distance_160"
+            app:indicator_margin="@dimen/distance_6"/>
 
     </LinearLayout>
 

@@ -1,7 +1,9 @@
 package com.example.envelope.index;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 
@@ -60,5 +62,10 @@ public class IndexActivity extends AppCompatActivity {
                 .selectTextColor(Color.parseColor("#EB562E"))   //Tab选中时字体颜色
                 .navigationHeight(60)  //导航栏高度
                 .build();
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
     }
 }

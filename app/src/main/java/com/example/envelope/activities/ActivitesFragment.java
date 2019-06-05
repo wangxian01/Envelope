@@ -10,21 +10,17 @@ import android.view.ViewGroup;
 import com.example.envelope.R;
 
 /**
- * A simple {@link Fragment} subclass.
- */
+ * 活动fragment
+ * Created by wangxian on 2019/6/5
+ **/
 public class ActivitesFragment extends Fragment {
-
-
-    public ActivitesFragment() {
-        // Required empty public constructor
-    }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fg_activites, container, false);
+        View view = inflater.inflate(R.layout.fg_activites, null);
+
+        return view;
     }
 
 }

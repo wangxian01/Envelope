@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="1024"
+    android:viewportHeight="1024">
+
+    <path
+        android:fillColor="@color/color_red"
+        android:pathData="M32 512C32 246.903328 246.903328 32 512 32 777.096672 32 992 246.903328 992 512
+992 777.096672 777.096672 992 512 992 246.903328 992 32 777.096672 32 512L32
+512ZM808.984864 299.867968 724.132032 215.015136 512 427.1472 299.867968
+215.015136 215.015136 299.867968 427.1472 512 215.015136 724.132032 299.867968
+808.984864 512 596.8528 724.132032 808.984864 808.984864 724.132032 596.8528 512
+808.984864 299.867968 808.984864 299.867968Z"
+        tools:ignore="VectorRaster" />
+</vector>

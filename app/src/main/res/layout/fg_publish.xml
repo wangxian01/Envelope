@@ -1,14 +1,206 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/default_bg"
+    android:orientation="vertical"
     tools:context=".publish.PublishFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="发布页面" />
+        android:layout_height="@dimen/distance_40"
+        android:background="@color/orange"
+        android:gravity="center"
+        android:text="发布"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/font_16" />
 
-</FrameLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/distance_6"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/distance_16"
+        android:paddingTop="@dimen/distance_10"
+        android:paddingRight="@dimen/distance_16"
+        android:paddingBottom="@dimen/distance_10">
+
+        <EditText
+            android:id="@+id/publish_et_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:gravity="top"
+            android:hint="请勿发布违反国家法律或色情等违规活动"
+            android:inputType="textMultiLine"
+            android:lines="2"
+            android:maxLines="2"
+            android:textColor="@color/colorBlack"
+            android:textColorHint="@color/color_font_hint"
+            android:textSize="12sp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/publish_picture_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/distance_50"
+        android:layout_marginTop="@dimen/distance_6"
+        android:background="@color/colorWhite">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/distance_16"
+            android:text="位置/范围"
+            android:textColor="@color/color_grey0"
+            android:textSize="@dimen/font_14" />
+
+        <TextView
+            android:id="@+id/publish_tv_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="6dp"
+            android:layout_toLeftOf="@id/publish_choose_location"
+            android:text="选择"
+            android:textColor="@color/color_grey1"
+            android:textSize="@dimen/font_14" />
+
+        <ImageView
+            android:id="@+id/publish_choose_location"
+            android:layout_width="@dimen/distance_26"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/distance_16"
+            android:paddingLeft="@dimen/distance_10"
+            android:paddingTop="@dimen/distance_16"
+            android:paddingBottom="@dimen/distance_16"
+            android:src="@mipmap/arrows_grey" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/distance_1"
+            android:layout_alignParentBottom="true"
+            android:background="@color/main_bg" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/distance_50"
+        android:background="@color/colorWhite">
+
+        <TextView
+            android:layout_marginLeft="@dimen/distance_16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="红包金额"
+            android:textColor="@color/color_grey0"
+            android:textSize="@dimen/font_14" />
+
+        <EditText
+            android:id="@+id/publish_et_money"
+            android:layout_width="@dimen/distance_140"
+            android:layout_height="@dimen/distance_30"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/distance_16"
+            android:layout_toLeftOf="@+id/fg_publish_yuan"
+            android:background="@null"
+            android:gravity="center_vertical|right"
+            android:hint="请输入红包金额"
+            android:inputType="number"
+            android:singleLine="true"
+            android:textColor="@color/color_grey0"
+            android:textColorHint="@color/color_grey1"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/fg_publish_yuan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/distance_16"
+            android:text="元"
+            android:textColor="@color/color_grey0"
+            android:textSize="@dimen/font_14" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/distance_1"
+            android:layout_alignParentBottom="true"
+            android:background="@color/main_bg" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/distance_50"
+        android:background="@color/colorWhite">
+
+        <TextView
+            android:layout_marginLeft="@dimen/distance_16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="红包个数"
+            android:textColor="@color/color_grey0"
+            android:textSize="@dimen/font_14" />
+
+        <EditText
+            android:id="@+id/publish_et_number"
+            android:layout_width="@dimen/distance_140"
+            android:layout_height="@dimen/distance_30"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/distance_16"
+            android:layout_toLeftOf="@+id/fg_publish_ge"
+            android:background="@null"
+            android:gravity="center_vertical|right"
+            android:hint="请输入红包个数"
+            android:inputType="number"
+            android:singleLine="true"
+            android:textColor="@color/color_grey0"
+            android:textColorHint="@color/color_grey1"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/fg_publish_ge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/distance_16"
+            android:text="个"
+            android:textColor="@color/color_grey0"
+            android:textSize="@dimen/font_14" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/distance_1"
+            android:layout_alignParentBottom="true"
+            android:background="@color/main_bg" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/publish_tv_sure"
+        android:layout_width="@dimen/distance_253"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/distance_30"
+        android:background="@drawable/bt_login_bg"
+        android:clickable="true"
+        android:gravity="center"
+        android:paddingTop="@dimen/distance_12"
+        android:paddingBottom="@dimen/distance_12"
+        android:text="发布"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/font_16" />
+</LinearLayout>

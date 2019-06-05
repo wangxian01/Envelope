@@ -9,9 +9,14 @@
     <color name="colorOrange">#DA6440</color>
     <color name="orange">#EB562E</color>
     <color name="orange2">#C54220</color>
+    <color name="orange3">#E98417</color>
     <color name="color_black_tran_50">#80000000</color>
     <color name="color_font_hint">#676767</color>
-
+    <color name="color_red">#ff3939</color>
     <color name="default_bg">#F0F0F0</color>
     <color name="main_bg">#CCCCCC</color>
+
+    <color name="color_grey0">#707070</color>
+    <color name="color_grey1">#8F8F8B</color>
+
 </resources>

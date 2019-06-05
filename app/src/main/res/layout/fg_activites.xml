@@ -1,14 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/default_bg"
+    android:orientation="vertical"
     tools:context=".activities.ActivitesFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="活动页面" />
+        android:layout_height="@dimen/distance_40"
+        android:background="@color/orange"
+        android:gravity="center"
+        android:text="活动"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/font_16" />
 
-</FrameLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/distance_60"
+        android:layout_marginTop="@dimen/distance_6"
+        android:background="@color/colorWhite"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/distance_16">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingTop="@dimen/distance_4">
+
+            <ImageView
+                android:id="@+id/fg_activites_img"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/xiaoxi"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/activites_tv_number"
+                android:layout_width="@dimen/distance_20"
+                android:layout_height="@dimen/distance_20"
+                android:background="@drawable/bg_orange_oval"
+                android:gravity="center"
+                android:text="99+"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/font_10"
+                app:layout_constraintBottom_toTopOf="@+id/fg_activites_img"
+                app:layout_constraintEnd_toEndOf="@+id/fg_activites_img"
+                app:layout_constraintStart_toEndOf="@+id/fg_activites_img"
+                app:layout_constraintTop_toTopOf="@+id/fg_activites_img"
+                tools:ignore="UnknownId,VectorDrawableCompat" />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_marginRight="@dimen/distance_16"
+            android:layout_marginTop="@dimen/distance_6"
+            android:layout_marginBottom="@dimen/distance_6"
+            android:layout_marginLeft="@dimen/font_16"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:textSize="@dimen/font_16"
+                android:textColor="@color/colorBlack"
+                android:text="通知消息"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/activites_tv_time"
+                android:textSize="@dimen/font_14"
+                android:textColor="@color/color_grey0"
+                android:text="今天14:42"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="MissingConstraints"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:ellipsize="end"
+                android:id="@+id/activites_tv_content"
+                android:textSize="@dimen/font_14"
+                android:textColor="@color/color_grey0"
+                android:maxLines="1"
+                android:text="[一元起购] 超值一元起购,海量好货等你来,特价ssss"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="MissingConstraints"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </android.support.constraint.ConstraintLayout>
+    </LinearLayout>
+
+    <WebView
+        android:layout_marginTop="@dimen/distance_6"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></WebView>
+
+
+</LinearLayout>
