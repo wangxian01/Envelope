@@ -82,8 +82,8 @@
             android:layout_alignParentRight="true"
             android:layout_marginRight="@dimen/distance_16"
             android:paddingLeft="@dimen/distance_10"
-            android:paddingTop="@dimen/distance_16"
-            android:paddingBottom="@dimen/distance_16"
+            android:paddingTop="@dimen/distance_18"
+            android:paddingBottom="@dimen/distance_18"
             android:src="@mipmap/arrows_grey" />
 
         <View

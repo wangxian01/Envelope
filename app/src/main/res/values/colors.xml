@@ -5,11 +5,14 @@
     <color name="colorAccent">#D81B60</color>
 
     <color name="colorWhite">#FFFFFF</color>
+    <color name="colorWhite2">#C5C5C5</color>
     <color name="colorBlack">#000000</color>
     <color name="colorOrange">#DA6440</color>
     <color name="orange">#EB562E</color>
     <color name="orange2">#C54220</color>
     <color name="orange3">#E98417</color>
+    <color name="orange4"> #EBCF30</color>
+    <color name="orange42">#B39D23</color>
     <color name="color_black_tran_50">#80000000</color>
     <color name="color_font_hint">#676767</color>
     <color name="color_red">#ff3939</color>
