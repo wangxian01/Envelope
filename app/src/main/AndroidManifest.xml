@@ -63,13 +63,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <!--我的钱包-->
+        <!--我的订单-->
+        <activity android:name=".my.order.OrderActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+        <!-- 我的钱包 -->
         <activity
             android:name=".my.wallet.MyWalletActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <!--照片选择三方-->
+            android:theme="@style/Theme.AppCompat.NoActionBar" /> <!-- 照片选择三方 -->
         <provider
             android:name="android.support.v4.content.FileProvider"
             android:authorities="com.example.envelope.fileprovider"
@@ -78,28 +82,33 @@
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths_public" />
-        </provider> <!-- 主页 -->
+        </provider>
+        <!-- 主页 -->
         <activity
             android:name=".index.IndexActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.NoActionBar" /> <!-- 忘记密码页面 -->
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <!-- 忘记密码页面 -->
         <activity
             android:name=".login.ForgetPwdActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.NoActionBar" /> <!-- 微信登录资料完善 -->
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <!-- 微信登录资料完善 -->
         <activity
             android:name=".login.WxLoginActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.NoActionBar" /> <!-- 注册页面 -->
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <!-- 注册页面 -->
         <activity
             android:name=".login.RegisterActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name=".MainActivity" /> <!-- 登录页面 -->
+        <activity android:name=".MainActivity" />
+        <!-- 登录页面 -->
         <activity
             android:name=".login.LoginActivity"
             android:launchMode="singleTask"

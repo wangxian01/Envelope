@@ -64,4 +64,6 @@ dependencies {
     implementation "com.zhihu.android:matisse:0.4.3"
     //权限申请
     implementation 'com.yanzhenjie.permission:support:2.0.1'
+    //ViewPager指示器 https://www.jianshu.com/p/2865812fed41
+    implementation 'com.github.hackware1993:MagicIndicator:1.5.0'
 }
