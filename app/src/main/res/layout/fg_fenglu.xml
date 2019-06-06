@@ -14,7 +14,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/distance_50"
             android:background="@color/orange">
 
             <RelativeLayout
@@ -63,7 +63,7 @@
                 android:layout_marginRight="@dimen/distance_24"
                 android:text="筛 选"
                 android:textColor="@color/colorWhite"
-                android:textSize="@dimen/font_18" />
+                android:textSize="@dimen/font_16" />
 
         </RelativeLayout>
 

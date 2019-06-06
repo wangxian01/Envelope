@@ -12,12 +12,10 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.envelope.R;
-import com.example.envelope.login.ForgetPwdActivity;
-import com.example.envelope.login.LoginActivity;
+import com.example.envelope.my.information.MyInformationActivity;
 import com.example.envelope.my.order.OrderActivity;
 import com.example.envelope.my.wallet.MyWalletActivity;
 import com.example.envelope.utils.CircleImageView;
-import com.example.envelope.utils.ToastUtil;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -27,7 +25,7 @@ import butterknife.Unbinder;
  * 我的 fragment
  * Created by wangxian on 2019/6/5
  **/
-public class MyFragment extends Fragment implements View.OnClickListener{
+public class MyFragment extends Fragment implements View.OnClickListener {
 
     /**
      * 消息图标
@@ -42,10 +40,10 @@ public class MyFragment extends Fragment implements View.OnClickListener{
     ImageView myImgSetting;
 
     /**
-     * 我的头像
+     * 个人信息
      */
-    @BindView(R.id.my_img_head)
-    CircleImageView myImgHead;
+    @BindView(R.id.my_rl_information)
+    RelativeLayout myRlInformation;
 
     /**
      * 我的名称
@@ -139,7 +137,7 @@ public class MyFragment extends Fragment implements View.OnClickListener{
      * 事件
      */
     private void initEvent() {
-        myImgHead.setOnClickListener(this);
+        myRlInformation.setOnClickListener(this);
         myImgMassage.setOnClickListener(this);
         myImgSetting.setOnClickListener(this);
         myRlCollect.setOnClickListener(this);
@@ -162,15 +160,17 @@ public class MyFragment extends Fragment implements View.OnClickListener{
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             //消息
             case R.id.my_img_massage:
                 break;
             //设置
             case R.id.my_img_setting:
                 break;
-            //头像
-            case R.id.my_img_head:
+            //个人信息
+            case R.id.my_rl_information:
+                Intent intentMyInformation = new Intent(getActivity(), MyInformationActivity.class);
+                startActivity(intentMyInformation);
                 break;
             //申请成为商家
             case R.id.my_tv_business_application:

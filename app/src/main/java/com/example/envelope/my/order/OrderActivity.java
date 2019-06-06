@@ -23,6 +23,7 @@ import net.lucode.hackware.magicindicator.buildins.commonnavigator.abs.CommonNav
 import net.lucode.hackware.magicindicator.buildins.commonnavigator.abs.IPagerIndicator;
 import net.lucode.hackware.magicindicator.buildins.commonnavigator.abs.IPagerTitleView;
 import net.lucode.hackware.magicindicator.buildins.commonnavigator.indicators.BezierPagerIndicator;
+import net.lucode.hackware.magicindicator.buildins.commonnavigator.indicators.LinePagerIndicator;
 import net.lucode.hackware.magicindicator.buildins.commonnavigator.titles.ClipPagerTitleView;
 
 import butterknife.BindView;
@@ -92,7 +93,7 @@ public class OrderActivity extends AppCompatActivity {
 
             @Override
             public IPagerIndicator getIndicator(Context context) {
-                BezierPagerIndicator indicator = new BezierPagerIndicator(context);
+                LinePagerIndicator indicator = new LinePagerIndicator(context);
                 indicator.setColors(Color.parseColor("#EB562E"));
                 return indicator;
             }

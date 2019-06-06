@@ -46,6 +46,7 @@
     </android.support.constraint.ConstraintLayout>
 
     <RelativeLayout
+        android:id="@+id/my_rl_information"
         android:layout_width="match_parent"
         android:layout_height="@dimen/distance_80"
         android:layout_marginLeft="@dimen/distance_16"

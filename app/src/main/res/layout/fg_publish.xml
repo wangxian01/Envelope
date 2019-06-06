@@ -9,7 +9,7 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="@dimen/distance_40"
+        android:layout_height="@dimen/distance_50"
         android:background="@color/orange"
         android:gravity="center"
         android:text="发布"
