@@ -107,9 +107,17 @@ public class FengluFragment extends Fragment {
     }
 
     @Override
+    public void onStop() {
+        super.onStop();
+    }
+
+    @Override
     public void onDestroy() {
         super.onDestroy();
-        //结束轮播
-        fengluBanner.stopAutoPlay();
+        if (fengluBanner != null){
+            //结束轮播
+            fengluBanner.stopAutoPlay();
+        }
+
     }
 }

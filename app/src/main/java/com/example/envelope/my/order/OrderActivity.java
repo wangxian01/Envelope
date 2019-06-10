@@ -7,8 +7,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
-import android.widget.ImageView;
+import android.view.View;
 
 import com.example.envelope.R;
 import com.example.envelope.my.order.all.AllOrderFragment;
@@ -16,26 +15,25 @@ import com.example.envelope.my.order.obligation.ObligationFragment;
 import com.example.envelope.my.order.refund.RefundFragment;
 import com.example.envelope.my.order.sendgoods.SendGoodsFragment;
 import com.example.envelope.my.order.waitreceiving.WaitReceivingFragment;
+import com.example.envelope.utils.BaseActivity;
+import com.example.envelope.utils.TitlebarUtile;
 
 import net.lucode.hackware.magicindicator.MagicIndicator;
 import net.lucode.hackware.magicindicator.buildins.commonnavigator.CommonNavigator;
 import net.lucode.hackware.magicindicator.buildins.commonnavigator.abs.CommonNavigatorAdapter;
 import net.lucode.hackware.magicindicator.buildins.commonnavigator.abs.IPagerIndicator;
 import net.lucode.hackware.magicindicator.buildins.commonnavigator.abs.IPagerTitleView;
-import net.lucode.hackware.magicindicator.buildins.commonnavigator.indicators.BezierPagerIndicator;
 import net.lucode.hackware.magicindicator.buildins.commonnavigator.indicators.LinePagerIndicator;
 import net.lucode.hackware.magicindicator.buildins.commonnavigator.titles.ClipPagerTitleView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class OrderActivity extends AppCompatActivity {
-
-    /**
-     * 返回按钮
-     */
-    @BindView(R.id.order_img_back)
-    ImageView orderImgBack;
+/**
+ * 我的订单
+ * Created by wangxian on 2019/6/6
+ **/
+public class OrderActivity extends BaseActivity {
 
     /**
      * viewpager指示器
@@ -49,6 +47,12 @@ public class OrderActivity extends AppCompatActivity {
     @BindView(R.id.order_view_pager)
     ViewPager orderViewPager;
 
+    /**
+     * 标题栏
+     */
+    @BindView(R.id.order_title)
+    TitlebarUtile orderTitle;
+
     private CommonNavigator commonNavigator;
     private String title[];
     private MyAdapter myAdapter;
@@ -61,17 +65,20 @@ public class OrderActivity extends AppCompatActivity {
 
         initData();
         initView();
-
+        initEvent();
     }
 
-    private void initData() {
-        title = new String[]{"全部","代付款","代发货","待收货","退款"};
+    @Override
+    public void initData() {
+        title = new String[]{"全部", "代付款", "代发货", "待收货", "退款"};
     }
 
-    private void initView() {
+    @Override
+    public void initView() {
+        orderTitle.setTitleSize(16);
         myAdapter = new MyAdapter(getSupportFragmentManager());
         orderViewPager.setAdapter(myAdapter);
-        commonNavigator  = new CommonNavigator(this);
+        commonNavigator = new CommonNavigator(this);
         commonNavigator.setAdapter(new CommonNavigatorAdapter() {
             @Override
             public int getCount() {
@@ -120,6 +127,26 @@ public class OrderActivity extends AppCompatActivity {
         });
 
         orderViewPager.setCurrentItem(0);
+    }
+
+    @Override
+    public void initEvent() {
+        orderTitle.setOnViewClick(new TitlebarUtile.onViewClick() {
+            @Override
+            public void leftClick() {
+                finish();
+            }
+
+            @Override
+            public void rightClick() {
+
+            }
+        });
+    }
+
+    @Override
+    public void onClick(View v) {
+
     }
 
     private class MyAdapter extends FragmentPagerAdapter {

@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.example.envelope.R;
 import com.example.envelope.index.IndexActivity;
+import com.example.envelope.utils.BaseActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -20,7 +21,7 @@ import butterknife.ButterKnife;
  * 登录页面
  * Created by wangxian on 2019/6/3
  **/
-public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
+public class LoginActivity extends BaseActivity {
 
     /**
      * 选择密码登录
@@ -92,10 +93,21 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         initEvent();
     }
 
+    @Override
+    public void initData() {
+
+    }
+
+    @Override
+    public void initView() {
+
+    }
+
     /**
      * 初始化事件
      */
-    private void initEvent() {
+    @Override
+    public void initEvent() {
         loginTvForgetPwd.setOnClickListener(this);
         loginTvGetvc.setOnClickListener(this);
         loginTvLg.setOnClickListener(this);

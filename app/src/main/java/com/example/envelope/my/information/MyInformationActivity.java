@@ -5,12 +5,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.example.envelope.R;
+import com.example.envelope.utils.BaseActivity;
 import com.example.envelope.utils.TitlebarUtile;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MyInformationActivity extends AppCompatActivity implements View.OnClickListener {
+/**
+ * 我的信息
+ * Created by wangxian on 2019/6/6
+ **/
+public class MyInformationActivity extends BaseActivity {
 
     /**
      * 封装好的标题栏
@@ -23,16 +28,24 @@ public class MyInformationActivity extends AppCompatActivity implements View.OnC
         super.onCreate(savedInstanceState);
         setContentView(R.layout.aty_my_information);
         ButterKnife.bind(this);
+        initData();
         initView();
         initEvent();
     }
 
-    private void initView(){
+    @Override
+    public void initData() {
+
+    }
+
+    @Override
+    public void initView(){
         //设置标题文字大小
         imformationTitle.setTitleSize(16);
     }
 
-    private void initEvent(){
+    @Override
+    public void initEvent(){
 
         imformationTitle.setOnViewClick(new TitlebarUtile.onViewClick() {
             @Override

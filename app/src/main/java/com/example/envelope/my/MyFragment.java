@@ -14,6 +14,7 @@ import android.widget.TextView;
 import com.example.envelope.R;
 import com.example.envelope.my.information.MyInformationActivity;
 import com.example.envelope.my.order.OrderActivity;
+import com.example.envelope.my.shopping.ShoppingActivity;
 import com.example.envelope.my.wallet.MyWalletActivity;
 import com.example.envelope.utils.CircleImageView;
 
@@ -187,6 +188,8 @@ public class MyFragment extends Fragment implements View.OnClickListener {
                 break;
             //我的购物车
             case R.id.my_rl_shopping:
+                Intent intentShopping = new Intent(getActivity(), ShoppingActivity.class);
+                startActivity(intentShopping);
                 break;
             //发布
             case R.id.my_rl_publish:

@@ -59,12 +59,30 @@
         android:allowBackup="true"
         android:icon="@mipmap/ico_red_start"
         android:label="@string/app_name"
+        android:maxAspectRatio="2.4"
+        android:resizeableActivity="true"
         android:roundIcon="@mipmap/ico_red_start"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".my.information.MyInformationActivity"></activity>
-        <!-- 我的订单 -->
+        tools:ignore="GoogleAppIndexingWarning,UnusedAttribute">
+        <!--交易记录-->
+        <activity android:name=".my.wallet.RecordActivity"/>
+        <!-- 购物车 -->
+        <activity android:name=".my.shopping.ShoppingActivity" /> <!-- 沉浸式配置 -->
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.4" /> <!-- 适配华为（huawei）刘海屏 -->
+        <meta-data
+            android:name="android.notch_support"
+            android:value="true" /> <!-- 适配小米（xiaomi）刘海屏 -->
+        <meta-data
+            android:name="notch.config"
+            android:value="portrait|landscape" /> <!-- 我的信息 -->
+        <activity
+            android:name=".my.information.MyInformationActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar" /> <!-- 我的订单 -->
         <activity
             android:name=".my.order.OrderActivity"
             android:launchMode="singleTask"

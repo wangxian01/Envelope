@@ -9,42 +9,53 @@
     android:background="@color/default_bg"
     tools:context=".my.wallet.MyWalletActivity">
 
-    <RelativeLayout
-        android:background="@color/colorOrange"
+    <!--<RelativeLayout-->
+        <!--android:background="@color/colorOrange"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/distance_40">-->
+
+        <!--<ImageView-->
+            <!--android:paddingLeft="@dimen/distance_16"-->
+            <!--android:paddingRight="@dimen/distance_6"-->
+            <!--android:id="@+id/wallet_img_back"-->
+            <!--android:src="@mipmap/ic_back"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="match_parent" />-->
+
+        <!--<TextView-->
+            <!--android:text="我的钱包"-->
+            <!--android:textColor="@color/colorWhite"-->
+            <!--android:textSize="@dimen/font_16"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/wallet_tv_transaction"-->
+            <!--android:paddingRight="@dimen/distance_4"-->
+            <!--android:paddingLeft="@dimen/distance_4"-->
+            <!--android:paddingTop="@dimen/distance_6"-->
+            <!--android:text="交易记录"-->
+            <!--android:layout_marginRight="@dimen/distance_12"-->
+            <!--android:textColor="@color/colorWhite"-->
+            <!--android:textSize="@dimen/font_12"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content" />-->
+    <!--</RelativeLayout>-->
+
+    <com.example.envelope.utils.TitlebarUtile
+        android:id="@+id/aty_wallet_title"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/distance_40">
-
-        <ImageView
-            android:paddingLeft="@dimen/distance_16"
-            android:paddingRight="@dimen/distance_6"
-            android:id="@+id/wallet_img_back"
-            android:src="@mipmap/ic_back"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent" />
-
-        <TextView
-            android:text="我的钱包"
-            android:textColor="@color/colorWhite"
-            android:textSize="@dimen/font_16"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <TextView
-            android:id="@+id/wallet_tv_transaction"
-            android:paddingRight="@dimen/distance_4"
-            android:paddingLeft="@dimen/distance_4"
-            android:paddingTop="@dimen/distance_6"
-            android:text="交易记录"
-            android:layout_marginRight="@dimen/distance_12"
-            android:textColor="@color/colorWhite"
-            android:textSize="@dimen/font_12"
-            android:layout_centerVertical="true"
-            android:layout_alignParentRight="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-    </RelativeLayout>
+        android:layout_height="48dp"
+        android:background="@color/orange"
+        app:centerTitle="我的钱包"
+        app:centerTextColor="@color/colorWhite"
+        app:rightText="交易记录"
+        app:rightTextColor="@color/colorWhite"
+        app:leftDrawble="@mipmap/ic_back" />
 
     <LinearLayout
         android:gravity="center"
@@ -68,6 +79,7 @@
             android:textSize="@dimen/font_12" />
 
         <TextView
+            android:id="@+id/aty_wallet_tv_money"
             android:layout_marginTop="@dimen/distance_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -79,7 +91,7 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/wallet_tv_money"
+        android:id="@+id/aty_wallet_tv_withdraw"
         android:layout_width="@dimen/distance_253"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"

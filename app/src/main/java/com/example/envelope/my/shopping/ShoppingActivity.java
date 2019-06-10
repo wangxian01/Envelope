@@ -1,9 +1,7 @@
-package com.example.envelope.my.wallet;
+package com.example.envelope.my.shopping;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.TextView;
 
 import com.example.envelope.R;
 import com.example.envelope.utils.BaseActivity;
@@ -13,33 +11,21 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
- * 我的钱包
- * Created by wangxian on 2019/6/5
+ * 购物车页面
+ * Created by wangxian on 2019/6/10
  **/
-public class MyWalletActivity extends BaseActivity {
+public class ShoppingActivity extends BaseActivity {
 
     /**
      * 标题栏
      */
-    @BindView(R.id.aty_wallet_title)
-    TitlebarUtile atyWalletTitle;
-
-    /**
-     * 我的余额
-     */
-    @BindView(R.id.aty_wallet_tv_money)
-    TextView atyWalletTvMoney;
-
-    /**
-     * 提现
-     */
-    @BindView(R.id.aty_wallet_tv_withdraw)
-    TextView atyWalletTvWithdraw;
+    @BindView(R.id.shopping_title)
+    TitlebarUtile shoppingTitle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.aty_my_wallet);
+        setContentView(R.layout.aty_shopping);
         ButterKnife.bind(this);
         initData();
         initView();
@@ -53,13 +39,14 @@ public class MyWalletActivity extends BaseActivity {
 
     @Override
     public void initView() {
-        atyWalletTitle.setTitleSize(16);
-        atyWalletTitle.setRightTextSize(12);
+        //设置标题文字大小
+        shoppingTitle.setTitleSize(16);
     }
 
     @Override
     public void initEvent() {
-        atyWalletTitle.setOnViewClick(new TitlebarUtile.onViewClick() {
+
+        shoppingTitle.setOnViewClick(new TitlebarUtile.onViewClick() {
             @Override
             public void leftClick() {
                 finish();
@@ -67,8 +54,7 @@ public class MyWalletActivity extends BaseActivity {
 
             @Override
             public void rightClick() {
-                Intent intent = new Intent(MyWalletActivity.this,RecordActivity.class);
-                startActivity(intent);
+
             }
         });
     }
@@ -77,4 +63,6 @@ public class MyWalletActivity extends BaseActivity {
     public void onClick(View v) {
 
     }
+
+
 }

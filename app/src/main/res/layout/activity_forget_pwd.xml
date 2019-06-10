@@ -8,28 +8,36 @@
     android:orientation="vertical"
     tools:context=".login.ForgetPwdActivity">
 
-    <RelativeLayout
+    <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/distance_40"-->
+        <!--android:background="@color/colorOrange">-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/forget_img_back"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:paddingLeft="@dimen/distance_16"-->
+            <!--android:paddingRight="@dimen/distance_6"-->
+            <!--android:src="@mipmap/ic_back" />-->
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:text="忘记密码"-->
+            <!--android:textColor="@color/colorWhite"-->
+            <!--android:textSize="@dimen/font_16" />-->
+    <!--</RelativeLayout>-->
+    <com.example.envelope.utils.TitlebarUtile
+        android:id="@+id/aty_forget_title"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/distance_40"
-        android:background="@color/colorOrange">
-
-        <ImageView
-            android:id="@+id/forget_img_back"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:paddingLeft="@dimen/distance_16"
-            android:paddingRight="@dimen/distance_6"
-            android:src="@mipmap/ic_back" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:text="忘记密码"
-            android:textColor="@color/colorWhite"
-            android:textSize="@dimen/font_16" />
-    </RelativeLayout>
+        android:layout_height="48dp"
+        android:background="@color/orange"
+        app:centerTitle="忘记密码"
+        app:centerTextColor="@color/colorWhite"
+        app:leftDrawble="@mipmap/ic_back" />
 
     <LinearLayout
         android:layout_width="match_parent"

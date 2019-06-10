@@ -69,18 +69,8 @@ public class TitlebarUtile extends RelativeLayout {
             }
         }
         array.recycle();
-        layout_left.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mClick.leftClick();
-            }
-        });
-        layout_right.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mClick.rightClick();
-            }
-        });
+        layout_left.setOnClickListener(view -> mClick.leftClick());
+        layout_right.setOnClickListener(view -> mClick.rightClick());
 
     }
 
@@ -92,6 +82,9 @@ public class TitlebarUtile extends RelativeLayout {
         iv_right = findViewById(R.id.iv_right);
         layout_left = findViewById(R.id.layout_left);
         layout_right = findViewById(R.id.layout_right);
+
+        //中间标题默认16ps
+        tv_title.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16);
     }
 
     public void setOnViewClick(onViewClick click) {

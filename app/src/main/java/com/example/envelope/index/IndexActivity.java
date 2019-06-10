@@ -6,12 +6,14 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 
 import com.example.envelope.R;
 import com.example.envelope.activities.ActivitesFragment;
 import com.example.envelope.fenglu.FengluFragment;
 import com.example.envelope.my.MyFragment;
 import com.example.envelope.publish.PublishFragment;
+import com.example.envelope.utils.BaseActivity;
 import com.next.easynavigation.view.EasyNavigationBar;
 
 import java.util.ArrayList;
@@ -24,7 +26,7 @@ import butterknife.ButterKnife;
  * 主页面
  * Created by wangxian on 2019/6/4
  **/
-public class IndexActivity extends AppCompatActivity {
+public class IndexActivity extends BaseActivity {
 
     @BindView(R.id.index_navigationBar)
     EasyNavigationBar indexNavigationBar;
@@ -44,10 +46,13 @@ public class IndexActivity extends AppCompatActivity {
         initView();
     }
 
-    /**
-     * 初始化控件
-     */
-    private void initView(){
+    @Override
+    public void initData() {
+
+    }
+
+    @Override
+    public void initView(){
         fragments.add(new FengluFragment());
         fragments.add(new PublishFragment());
         fragments.add(new ActivitesFragment());
@@ -65,7 +70,17 @@ public class IndexActivity extends AppCompatActivity {
     }
 
     @Override
+    public void initEvent() {
+
+    }
+
+    @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+    }
+
+    @Override
+    public void onClick(View v) {
+
     }
 }
