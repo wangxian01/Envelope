@@ -65,9 +65,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning,UnusedAttribute">
-        <!--交易记录-->
-        <activity android:name=".my.wallet.RecordActivity"/>
-        <!-- 购物车 -->
+        <activity android:name=".my.information.addresses.AddressesActivity"></activity>
+        <activity android:name=".my.information.signature.SinatureActivity" />
+        <activity android:name=".my.information.nickname.NickNameActivity" /> <!-- 交易记录 -->
+        <activity android:name=".my.wallet.RecordActivity" /> <!-- 购物车 -->
         <activity android:name=".my.shopping.ShoppingActivity" /> <!-- 沉浸式配置 -->
         <meta-data
             android:name="android.max_aspect"
@@ -92,16 +93,7 @@
             android:name=".my.wallet.MyWalletActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.NoActionBar" /> <!-- 照片选择三方 -->
-        <provider
-            android:name="android.support.v4.content.FileProvider"
-            android:authorities="com.example.envelope.fileprovider"
-            android:exported="false"
-            android:grantUriPermissions="true">
-            <meta-data
-                android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/file_paths_public" />
-        </provider> <!-- 主页 -->
+            android:theme="@style/Theme.AppCompat.NoActionBar" /> <!-- 主页 -->
         <activity
             android:name=".index.IndexActivity"
             android:launchMode="singleTask"

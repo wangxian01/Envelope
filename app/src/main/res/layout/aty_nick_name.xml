@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/default_bg"
+    android:orientation="vertical"
+    tools:context=".my.information.nickname.NickNameActivity">
+
+    <com.example.envelope.utils.TitlebarUtile
+        android:id="@+id/aty_name_title"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/orange"
+        app:centerTextColor="@color/colorWhite"
+        app:centerTitle="修改我的昵称"
+        app:leftDrawble="@mipmap/ic_back"
+        app:rightText="保存"
+        app:rightTextColor="@color/colorWhite" />
+
+    <EditText
+        android:id="@+id/aty_name_et_modifier"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="center_vertical"
+        android:background="@color/colorWhite"
+        android:gravity="center_vertical"
+        android:hint="请输入要修改的昵称(最多11个字)"
+        android:inputType="text"
+        android:lines="1"
+        android:maxLength="10"
+        android:paddingLeft="@dimen/distance_16"
+        android:paddingRight="@dimen/distance_16"
+        android:singleLine="true"
+        android:textColor="@color/colorBlack"
+        android:textColorHint="@color/color_font_hint"
+        android:textSize="16sp" />
+
+
+</LinearLayout>

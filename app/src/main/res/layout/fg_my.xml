@@ -91,7 +91,7 @@
                 android:layout_marginTop="@dimen/distance_6"
                 android:ellipsize="end"
                 android:maxLines="1"
-                android:text="签名签名签名签名签名"
+                android:text="签名签名签名签名签名签名签名签名签名签名"
                 android:textColor="@color/color_grey0"
                 android:textSize="@dimen/font_12" />
 

@@ -6,14 +6,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".my.wallet.RecordActivity">
+    tools:context=".my.information.addresses.AddressesActivity">
 
     <com.example.envelope.utils.TitlebarUtile
-        android:id="@+id/aty_record_title"
+        android:id="@+id/aty_address_title"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:background="@color/orange"
         app:centerTextColor="@color/colorWhite"
-        app:centerTitle="交易记录"
-        app:leftDrawble="@mipmap/ic_back" />
+        app:centerTitle="修改我的收货地址"
+        app:leftDrawble="@mipmap/ic_back"
+        app:rightText="保存"
+        app:rightTextColor="@color/colorWhite" />
 </LinearLayout>

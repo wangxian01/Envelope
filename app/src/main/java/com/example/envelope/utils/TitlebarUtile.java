@@ -7,7 +7,7 @@ import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
-import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -85,6 +85,7 @@ public class TitlebarUtile extends RelativeLayout {
 
         //中间标题默认16ps
         tv_title.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16);
+
     }
 
     public void setOnViewClick(onViewClick click) {
@@ -138,6 +139,10 @@ public class TitlebarUtile extends RelativeLayout {
         if (iv_left != null) {
             iv_left.setImageResource(res);
         }
+//        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
+//                ViewGroup.LayoutParams.WRAP_CONTENT);
+//        layoutParams.setMargins(16,0,0,0);//4个参数按顺序分别是左上右下
+//        iv_left.setLayoutParams(layoutParams);
     }
 
     //设置右图标
@@ -145,6 +150,22 @@ public class TitlebarUtile extends RelativeLayout {
         if (iv_right != null) {
             iv_right.setImageResource(res);
         }
+    }
+
+    //设置右标题间距
+    public void setRightMargins(int left,int top,int right,int bottom){
+        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT);
+        layoutParams.setMargins(left,top,right,bottom);//4个参数按顺序分别是左上右下
+        tv_right.setLayoutParams(layoutParams);
+    }
+
+    //设置左标题间距
+    public void setLeftMargins(int left,int top,int right,int bottom){
+        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT);
+        layoutParams.setMargins(left,top,right,bottom);//4个参数按顺序分别是左上右下
+        tv_left.setLayoutParams(layoutParams);
     }
 
     public interface onViewClick {

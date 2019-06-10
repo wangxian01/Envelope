@@ -21,15 +21,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.envelope.R;
-import com.example.envelope.utils.GlideEngineUtil;
 import com.example.envelope.utils.ToastUtil;
+import com.luck.picture.lib.PictureSelector;
+import com.luck.picture.lib.config.PictureConfig;
+import com.luck.picture.lib.config.PictureMimeType;
+import com.luck.picture.lib.entity.LocalMedia;
 import com.yanzhenjie.permission.AndPermission;
 import com.yanzhenjie.permission.runtime.Permission;
-import com.zhihu.matisse.Matisse;
-import com.zhihu.matisse.MimeType;
-import com.zhihu.matisse.engine.impl.GlideEngine;
-import com.zhihu.matisse.filter.Filter;
-import com.zhihu.matisse.internal.entity.CaptureStrategy;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,8 +43,6 @@ import static android.app.Activity.RESULT_OK;
  * Created by wangxian on 2019/6/5
  **/
 public class PublishFragment extends Fragment {
-
-    private static final int REQUEST_CODE_CHOOSE = 1001;
 
     /**
      * 发布内容
@@ -105,7 +101,6 @@ public class PublishFragment extends Fragment {
         return view;
     }
 
-
     /**
      * 数据
      */
@@ -132,34 +127,9 @@ public class PublishFragment extends Fragment {
         adapter.setItemClickListener(new ChoosePictureAdapter.ItemClickListener() {
             @Override
             public void takePhoto() {
-                //权限申请
-                AndPermission.with(getActivity())
-                        .runtime()
-                        .permission(Permission.Group.STORAGE,
-                                Permission.Group.CAMERA)
-                        .onGranted(permissions -> {
-                            // Storage permission are allowed.
-                            int maxCount = 10 - images.size();
-                            if (maxCount > 0) {
-                                Matisse.from(PublishFragment.this)
-                                        .choose(MimeType.allOf())//图片类型
-                                        .countable(true)//true:选中后显示数字;false:选中后显示对号
-                                        .maxSelectable(5)//可选的最大数
-                                        .capture(true)//选择照片时，是否显示拍照
-                                        .theme(R.style.Matisse_Dracula)
-                                        .captureStrategy(new CaptureStrategy(true, "com.example.envelope.fileprovider"))//参数1 true表示拍照存储在共有目录，false表示存储在私有目录；参数2与 AndroidManifest中authorities值相同，用于适配7.0系统 必须设置
-                                        .imageEngine(new GlideEngineUtil())//图片加载引擎
-                                        .forResult(REQUEST_CODE_CHOOSE);
-                            } else {
-
-                            }
-                        })
-                        .onDenied(permissions -> {
-                            // Storage permission are not allowed.
-                            ToastUtil.showShort(getActivity(), "权限未申请成功!");
-                        })
-                        .start();
+                choosePhoto();
             }
+
             @Override
             public void delete(int position) {
                 images.remove(position);
@@ -168,19 +138,59 @@ public class PublishFragment extends Fragment {
         });
     }
 
+    /**
+     * 选择图片
+     */
+    private void choosePhoto() {
+        //权限申请
+        AndPermission.with(getActivity())
+                .runtime()
+                .permission(Permission.Group.STORAGE,
+                        Permission.Group.CAMERA)
+                .onGranted(permissions -> {
+                    int maxCount = 10 - images.size();
+                    if (maxCount > 0) {
+                        PictureSelector.create(PublishFragment.this)
+                                .openGallery(PictureMimeType.ofImage())//全部.PictureMimeType.ofAll()、图片.ofImage()、视频.ofVideo()、音频.ofAudio()
+                                .maxSelectNum(maxCount)// 最大图片选择数量 int
+                                .imageSpanCount(4)// 每行显示个数 int
+                                .selectionMode(PictureConfig.MULTIPLE)// 多选 or 单选 PictureConfig.MULTIPLE or PictureConfig.SINGLE
+                                .previewImage(true)// 是否可预览图片 true or false
+                                .isCamera(true)// 是否显示拍照按钮 true or false
+                                .imageFormat(PictureMimeType.PNG)// 拍照保存图片格式后缀,默认jpeg
+                                .isZoomAnim(true)// 图片列表点击 缩放效果 默认true
+                                .sizeMultiplier(0.5f)// glide 加载图片大小 0~1之间 如设置 .glideOverride()无效
+                                .previewEggs(true)// 预览图片时 是否增强左右滑动图片体验(图片滑动一半即可看到上一张是否选中) true or false
+                                .forResult(PictureConfig.CHOOSE_REQUEST);//结果回调onActivityResult code
+                    } else {
+
+                    }
+                })
+                .onDenied(permissions -> {
+                    // Storage permission are not allowed.
+                    ToastUtil.showShort(getActivity(), "权限未申请成功!");
+                })
+                .start();
+    }
+
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == REQUEST_CODE_CHOOSE && resultCode == RESULT_OK) {
-            if (data != null){
-                List<Uri> result = Matisse.obtainResult(data);
-                for (int i = 0; i < result.size(); i++) {
-                    images.add(result.get(i).toString());
+        if (requestCode == PictureConfig.CHOOSE_REQUEST && resultCode == RESULT_OK) {
+            if (data != null) {
+                //图片单选和多选数据都是以ArrayList的字符串数组返回的。
+                // 图片、视频、音频选择结果回调
+                List<LocalMedia> selectList = PictureSelector.obtainMultipleResult(data);
+                // 例如 LocalMedia 里面返回三种path
+                // 1.media.getPath(); 为原图path
+                // 2.media.getCutPath();为裁剪后path，需判断media.isCut();是否为true  注意：音视频除外
+                // 3.media.getCompressPath();为压缩后path，需判断media.isCompressed();是否为true  注意：音视频除外
+                // 如果裁剪并压缩了，以取压缩路径为准，因为是先裁剪后压缩的
+                for (int i = 0; i < selectList.size(); i++) {
+                    images.add(selectList.get(i).getPath());
                 }
                 adapter.notifyDataSetChanged();
             }
-
-
         }
 
     }
@@ -190,4 +200,6 @@ public class PublishFragment extends Fragment {
         super.onDestroyView();
         unbinder.unbind();
     }
+
+
 }

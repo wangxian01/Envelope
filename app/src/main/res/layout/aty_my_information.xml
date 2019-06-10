@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:orientation="vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/default_bg"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/default_bg"
+    android:orientation="vertical"
     tools:context=".my.information.MyInformationActivity">
 
     <com.example.envelope.utils.TitlebarUtile
@@ -14,7 +13,188 @@
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:background="@color/orange"
-        app:centerTitle="我的信息"
         app:centerTextColor="@color/colorWhite"
+        app:centerTitle="我的信息"
         app:leftDrawble="@mipmap/ic_back" />
+
+    <RelativeLayout
+        android:id="@+id/aty_information_rl_head"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/distance_90"
+        android:layout_marginTop="@dimen/distance_10"
+        android:background="@drawable/rl_white_bg"
+        android:clickable="true"
+        tools:ignore="Suspicious0dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/distance_16"
+            android:text="头像"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/font_16" />
+
+        <com.example.envelope.utils.CircleImageView
+            android:id="@+id/aty_information_img_head"
+            android:layout_width="@dimen/distance_70"
+            android:layout_height="@dimen/distance_70"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/distance_16"
+            android:layout_toStartOf="@id/aty_img_touxiang"
+            android:layout_toLeftOf="@id/aty_img_touxiang"
+            android:src="@mipmap/ico_red_start" />
+
+        <ImageView
+            android:id="@+id/aty_img_touxiang"
+            android:layout_width="@dimen/distance_20"
+            android:layout_height="@dimen/distance_20"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/distance_16"
+            android:paddingLeft="@dimen/distance_10"
+            android:paddingTop="@dimen/distance_2"
+            android:paddingBottom="@dimen/distance_2"
+            android:src="@mipmap/arrows_grey" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/distance_1"
+            android:layout_alignParentBottom="true"
+            android:background="@color/main_bg" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/aty_information_rl_name"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/distance_50"
+        android:background="@drawable/rl_white_bg"
+        android:clickable="true"
+        tools:ignore="Suspicious0dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/distance_16"
+            android:text="昵称"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/font_16" />
+
+        <TextView
+            android:id="@+id/aty_information_tv_name"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/distance_16"
+            android:layout_toStartOf="@id/aty_img_nicheng"
+            android:layout_toLeftOf="@id/aty_img_nicheng"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/distance_6"
+            android:ellipsize="end"
+            android:maxLength="10"
+            android:maxLines="1"
+            android:text="招财猫"
+            android:textColor="@color/color_grey0"
+            android:textSize="@dimen/font_16" />
+
+        <ImageView
+            android:id="@+id/aty_img_nicheng"
+            android:layout_width="@dimen/distance_20"
+            android:layout_height="@dimen/distance_20"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/distance_16"
+            android:paddingLeft="@dimen/distance_10"
+            android:paddingTop="@dimen/distance_2"
+            android:paddingBottom="@dimen/distance_2"
+            android:src="@mipmap/arrows_grey" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/distance_1"
+            android:layout_alignParentBottom="true"
+            android:background="@color/main_bg" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/aty_information_rl_signature"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/distance_50"
+        android:background="@drawable/rl_white_bg"
+        android:clickable="true"
+        tools:ignore="Suspicious0dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/distance_16"
+            android:text="签名"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/font_16" />
+
+        <TextView
+            android:id="@+id/aty_information_tv_signature"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/distance_16"
+            android:layout_toStartOf="@id/aty_img_signature"
+            android:layout_toLeftOf="@id/aty_img_signature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/distance_6"
+            android:ellipsize="end"
+            android:maxLength="30"
+            android:maxLines="1"
+            android:text="苟富贵,勿相忘"
+            android:textColor="@color/color_grey0"
+            android:textSize="@dimen/font_16" />
+
+        <ImageView
+            android:id="@+id/aty_img_signature"
+            android:layout_width="@dimen/distance_20"
+            android:layout_height="@dimen/distance_20"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/distance_16"
+            android:paddingLeft="@dimen/distance_10"
+            android:paddingTop="@dimen/distance_2"
+            android:paddingBottom="@dimen/distance_2"
+            android:src="@mipmap/arrows_grey" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/distance_1"
+            android:layout_alignParentBottom="true"
+            android:background="@color/main_bg" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/aty_information_rl_addresses"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/distance_50"
+        android:background="@drawable/rl_white_bg"
+        android:clickable="true"
+        tools:ignore="Suspicious0dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/distance_16"
+            android:text="收货地址"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/font_16" />
+
+        <ImageView
+            android:layout_width="@dimen/distance_20"
+            android:layout_height="@dimen/distance_20"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/distance_16"
+            android:paddingLeft="@dimen/distance_10"
+            android:paddingTop="@dimen/distance_2"
+            android:paddingBottom="@dimen/distance_2"
+            android:src="@mipmap/arrows_grey" />
+    </RelativeLayout>
+
 </LinearLayout>

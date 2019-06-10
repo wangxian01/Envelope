@@ -49,33 +49,33 @@
 
 
         <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/distance_60">
+
+        <EditText
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/distance_16"
+            android:layout_marginLeft="@dimen/distance_16"
+            android:id="@+id/register_et_account"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/distance_60">
+            android:layout_height="48dp"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@mipmap/shouji"
+            android:drawablePadding="@dimen/distance_8"
+            android:gravity="center_vertical"
+            android:hint="输入手机号"
+            android:inputType="number"
+            android:maxLength="11"
+            android:textColor="@color/colorBlack"
+            android:textColorHint="@color/color_font_hint"
+            android:textSize="14sp" />
 
-            <EditText
-                android:layout_gravity="center_vertical"
-                android:layout_marginRight="@dimen/distance_16"
-                android:layout_marginLeft="@dimen/distance_16"
-                android:id="@+id/register_et_account"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:background="@android:color/transparent"
-                android:drawableLeft="@mipmap/shouji"
-                android:drawablePadding="@dimen/distance_8"
-                android:gravity="center_vertical"
-                android:hint="输入手机号"
-                android:inputType="number"
-                android:maxLength="11"
-                android:textColor="@color/colorBlack"
-                android:textColorHint="@color/color_font_hint"
-                android:textSize="14sp" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/distance_1"
-                android:layout_gravity="bottom"
-                android:background="@color/main_bg" />
-        </FrameLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/distance_1"
+            android:layout_gravity="bottom"
+            android:background="@color/main_bg" />
+    </FrameLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
