@@ -1,6 +1,7 @@
 package com.example.envelope.fenglu;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -10,6 +11,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.envelope.R;
+import com.example.envelope.fenglu.filtrate.FiltrateActivity;
 import com.example.envelope.utils.GlideImageLoader;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
@@ -26,7 +28,7 @@ import butterknife.Unbinder;
  * 奉鹿fragment
  * Created by wangxian on 2019/6/4
  **/
-public class FengluFragment extends Fragment {
+public class FengluFragment extends Fragment implements View.OnClickListener{
 
     /**
      * 搜索框
@@ -58,8 +60,15 @@ public class FengluFragment extends Fragment {
 
         initData();
         initView();
-
+        initEvent();
         return view;
+    }
+
+    /**
+     * 初始化事件
+     */
+    private void initEvent() {
+        fengluTvFiltrate.setOnClickListener(FengluFragment.this);
     }
 
     /**
@@ -119,5 +128,17 @@ public class FengluFragment extends Fragment {
             fengluBanner.stopAutoPlay();
         }
 
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.fenglu_tv_filtrate:
+                Intent intentFiltrate = new Intent(getActivity(), FiltrateActivity.class);
+                startActivity(intentFiltrate);
+                break;
+            default:
+                break;
+        }
     }
 }

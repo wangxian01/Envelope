@@ -12,8 +12,13 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.envelope.R;
+import com.example.envelope.my.collect.MyCollectActivity;
 import com.example.envelope.my.information.MyInformationActivity;
+import com.example.envelope.my.massage.MyMessageActivity;
+import com.example.envelope.my.mypublish.MyPublishActivity;
 import com.example.envelope.my.order.OrderActivity;
+import com.example.envelope.my.redpacket.RedPacketActivity;
+import com.example.envelope.my.setting.SettingActivity;
 import com.example.envelope.my.shopping.ShoppingActivity;
 import com.example.envelope.my.wallet.MyWalletActivity;
 import com.example.envelope.utils.CircleImageView;
@@ -164,9 +169,13 @@ public class MyFragment extends Fragment implements View.OnClickListener {
         switch (v.getId()) {
             //消息
             case R.id.my_img_massage:
+                Intent intentMyMessage = new Intent(getActivity(), MyMessageActivity.class);
+                startActivity(intentMyMessage);
                 break;
             //设置
             case R.id.my_img_setting:
+                Intent intentSetting = new Intent(getActivity(), SettingActivity.class);
+                startActivity(intentSetting);
                 break;
             //个人信息
             case R.id.my_rl_information:
@@ -193,12 +202,18 @@ public class MyFragment extends Fragment implements View.OnClickListener {
                 break;
             //发布
             case R.id.my_rl_publish:
+                Intent intentMyPublish = new Intent(getActivity(), MyPublishActivity.class);
+                startActivity(intentMyPublish);
                 break;
             //红包
             case R.id.my_rl_red_packet:
+                Intent intentRedPacket = new Intent(getActivity(), RedPacketActivity.class);
+                startActivity(intentRedPacket);
                 break;
-            //钱包
+            //收藏
             case R.id.my_rl_collect:
+                Intent intentMyCollect = new Intent(getActivity(), MyCollectActivity.class);
+                startActivity(intentMyCollect);
                 break;
             //店铺
             case R.id.my_rl_store:

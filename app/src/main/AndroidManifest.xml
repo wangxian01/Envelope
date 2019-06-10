@@ -65,7 +65,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning,UnusedAttribute">
-        <activity android:name=".my.information.addresses.AddressesActivity"></activity>
+        <activity android:name=".fenglu.filtrate.FiltrateActivity"></activity>
+        <activity android:name=".my.massage.MyMessageActivity" />
+        <activity android:name=".my.setting.SettingActivity" />
+        <activity android:name=".my.collect.MyCollectActivity" />
+        <activity android:name=".my.redpacket.RedPacketActivity" />
+        <activity android:name=".my.mypublish.MyPublishActivity" />
+        <activity android:name=".my.information.addresses.AddressesActivity" />
         <activity android:name=".my.information.signature.SinatureActivity" />
         <activity android:name=".my.information.nickname.NickNameActivity" /> <!-- 交易记录 -->
         <activity android:name=".my.wallet.RecordActivity" /> <!-- 购物车 -->
