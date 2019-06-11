@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/rl_white_bg"
+    android:clickable="true"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/distance_50">
+
+    <TextView
+        android:id="@+id/item_category_tv"
+        android:layout_marginLeft="@dimen/distance_16"
+        android:gravity="center"
+        android:textSize="@dimen/font_16"
+        android:textColor="@color/colorBlack"
+        android:text="医疗"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/distance_1"
+        android:background="@color/main_bg" />
+</RelativeLayout>

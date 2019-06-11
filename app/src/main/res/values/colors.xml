@@ -22,4 +22,9 @@
     <color name="color_grey0">#707070</color>
     <color name="color_grey1">#8F8F8B</color>
 
+    <color name="color_transparent">#00000000</color>
+    <color name="color_red2">#FE6072</color>
+    <color name="color_blue">#1c86ee</color>
+    <color name="color_blue_rg">#0584E9</color>
+    <color name="color_grey">#CFD3DE</color>
 </resources>

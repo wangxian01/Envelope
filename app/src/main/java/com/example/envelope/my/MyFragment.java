@@ -12,6 +12,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.envelope.R;
+import com.example.envelope.my.application.ApplicationActivity;
 import com.example.envelope.my.collect.MyCollectActivity;
 import com.example.envelope.my.information.MyInformationActivity;
 import com.example.envelope.my.massage.MyMessageActivity;
@@ -184,6 +185,8 @@ public class MyFragment extends Fragment implements View.OnClickListener {
                 break;
             //申请成为商家
             case R.id.my_tv_business_application:
+                Intent intentApplication = new Intent(getActivity(), ApplicationActivity.class);
+                startActivity(intentApplication);
                 break;
             //钱包
             case R.id.my_rl_wallet:

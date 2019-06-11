@@ -6,14 +6,91 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/default_bg"
     tools:context=".my.setting.SettingActivity">
 
     <com.example.envelope.utils.TitlebarUtile
-        android:id="@+id/aty_setting_title"
+        android:id="@+id/setting_title"
         android:layout_width="match_parent"
         android:layout_height="48dp"
+        android:paddingLeft="@dimen/distance_8"
         android:background="@color/orange"
         app:centerTextColor="@color/colorWhite"
         app:centerTitle="设置"
         app:leftDrawble="@mipmap/ic_back" />
+
+    <RelativeLayout
+        android:id="@+id/settinge_rl_version"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/distance_10"
+        android:layout_height="@dimen/distance_50"
+        android:background="@drawable/rl_white_bg"
+        android:clickable="true"
+        tools:ignore="Suspicious0dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/distance_16"
+            android:layout_alignParentLeft="true"
+            android:text="当前版本号(1.0.5)"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/font_16" />
+
+        <ImageView
+            android:layout_width="@dimen/distance_20"
+            android:layout_height="@dimen/distance_20"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/distance_16"
+            android:paddingLeft="@dimen/distance_10"
+            android:paddingTop="@dimen/distance_2"
+            android:paddingBottom="@dimen/distance_2"
+            android:src="@mipmap/arrows_grey" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/distance_1"
+            android:layout_alignParentBottom="true"
+            android:background="@color/main_bg" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/setting_rl_return_account"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/distance_50"
+        android:background="@drawable/rl_white_bg"
+        android:clickable="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/distance_16"
+            android:layout_alignParentLeft="true"
+            android:text="退出当前账号"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/font_16" />
+
+        <ImageView
+            android:layout_width="@dimen/distance_20"
+            android:layout_height="@dimen/distance_20"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/distance_16"
+            android:paddingLeft="@dimen/distance_10"
+            android:paddingTop="@dimen/distance_2"
+            android:paddingBottom="@dimen/distance_2"
+            android:src="@mipmap/arrows_grey" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_marginTop="@dimen/distance_36"
+        android:text="Copyright2018-2019\n四川奉命行事信息技术咨询有限公司 版权所有"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 </LinearLayout>

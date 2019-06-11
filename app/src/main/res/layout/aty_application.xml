@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/default_bg"
+    android:orientation="vertical"
+    tools:context=".my.application.ApplicationActivity">
+
+    <com.example.envelope.utils.TitlebarUtile
+        android:id="@+id/application_title"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/orange"
+        android:paddingLeft="@dimen/distance_8"
+        app:centerTextColor="@color/colorWhite"
+        app:centerTitle="商家申请"
+        app:leftDrawble="@mipmap/ic_back" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/distance_50"
+        android:layout_marginTop="@dimen/distance_6"
+        android:background="@color/colorWhite"
+        android:clickable="true"
+        tools:ignore="Suspicious0dp">
+
+        <EditText
+            android:id="@+id/application_et_merchant_name"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_gravity="center_vertical"
+            android:background="@color/colorWhite"
+            android:gravity="center_vertical"
+            android:hint="请输入店铺名称"
+            android:inputType="text"
+            android:lines="1"
+            android:paddingLeft="@dimen/distance_16"
+            android:paddingTop="@dimen/distance_6"
+            android:paddingRight="@dimen/distance_16"
+            android:paddingBottom="@dimen/distance_6"
+            android:singleLine="true"
+            android:textColor="@color/color_font_hint"
+            android:textColorHint="@color/color_font_hint"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/distance_1"
+            android:layout_alignParentBottom="true"
+            android:background="@color/main_bg" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/application_rl_merchant_category"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/distance_50"
+        android:background="@drawable/rl_white_bg"
+        android:clickable="true"
+        tools:ignore="Suspicious0dp">
+
+        <TextView
+            android:id="@+id/application_tv_merchant_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/distance_16"
+            android:text="商家类别"
+            android:textColor="@color/color_font_hint"
+            android:textSize="@dimen/font_14" />
+
+        <ImageView
+            android:layout_width="@dimen/distance_20"
+            android:layout_height="@dimen/distance_20"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/distance_16"
+            android:paddingLeft="@dimen/distance_10"
+            android:paddingTop="@dimen/distance_2"
+            android:paddingBottom="@dimen/distance_2"
+            android:src="@mipmap/arrows_grey" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/distance_1"
+            android:layout_alignParentBottom="true"
+            android:background="@color/main_bg" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/distance_50"
+        android:background="@color/colorWhite">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/distance_16"
+            android:text="营业执照(可拍照上传)"
+            android:textColor="@color/color_font_hint"
+            android:textSize="@dimen/font_14" />
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/application_rv_choose_picture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-6dp"
+        android:background="@color/colorWhite"
+        android:paddingLeft="@dimen/distance_16"
+        android:paddingRight="@dimen/distance_16"
+        android:paddingBottom="@dimen/distance_10" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/distance_1"
+        android:background="@color/main_bg" />
+
+    <RelativeLayout
+        android:id="@+id/application_rl_licence"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/distance_50"
+        android:background="@drawable/rl_white_bg"
+        android:clickable="true"
+        tools:ignore="Suspicious0dp">
+
+        <TextView
+            android:id="@+id/application_tv_licence"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/distance_16"
+            android:text="经营许可证类别"
+            android:textColor="@color/color_font_hint"
+            android:textSize="@dimen/font_14" />
+
+        <ImageView
+            android:layout_width="@dimen/distance_20"
+            android:layout_height="@dimen/distance_20"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/distance_16"
+            android:paddingLeft="@dimen/distance_10"
+            android:paddingTop="@dimen/distance_2"
+            android:paddingBottom="@dimen/distance_2"
+            android:src="@mipmap/arrows_grey" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/distance_1"
+            android:layout_alignParentBottom="true"
+            android:background="@color/main_bg" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/distance_50"
+        android:background="@color/colorWhite"
+        android:clickable="true"
+        tools:ignore="Suspicious0dp">
+
+        <EditText
+            android:id="@+id/application_et_contact"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_gravity="center_vertical"
+            android:background="@color/colorWhite"
+            android:gravity="center_vertical"
+            android:hint="请输入联系方式"
+            android:inputType="phone"
+            android:lines="1"
+            android:paddingLeft="@dimen/distance_16"
+            android:paddingTop="@dimen/distance_6"
+            android:paddingRight="@dimen/distance_16"
+            android:paddingBottom="@dimen/distance_6"
+            android:singleLine="true"
+            android:textColor="@color/color_font_hint"
+            android:textColorHint="@color/color_font_hint"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/application_tv_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="@dimen/distance_70"
+        android:layout_marginTop="@dimen/distance_40"
+        android:layout_marginRight="@dimen/distance_70"
+        android:background="@drawable/bt_login_bg"
+        android:clickable="true"
+        android:gravity="center"
+        android:paddingTop="@dimen/distance_10"
+        android:paddingBottom="@dimen/distance_10"
+        android:text="立即申请"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/font_16" />
+</LinearLayout>

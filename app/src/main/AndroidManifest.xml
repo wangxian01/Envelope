@@ -65,7 +65,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning,UnusedAttribute">
-        <activity android:name=".fenglu.filtrate.FiltrateActivity"></activity>
+        <activity android:name=".my.application.LicenceActivity"/>
+        <activity android:name=".my.application.CategoryActivity"/>
+        <activity android:name=".my.application.ApplicationActivity" />
+        <activity android:name=".fenglu.filtrate.FiltrateActivity" />
         <activity android:name=".my.massage.MyMessageActivity" />
         <activity android:name=".my.setting.SettingActivity" />
         <activity android:name=".my.collect.MyCollectActivity" />

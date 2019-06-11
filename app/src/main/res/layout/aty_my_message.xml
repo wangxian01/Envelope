@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:orientation="vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/default_bg"
+    android:orientation="vertical"
     tools:context=".my.massage.MyMessageActivity">
 
     <com.example.envelope.utils.TitlebarUtile
@@ -14,7 +13,182 @@
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:background="@color/orange"
+        android:paddingLeft="@dimen/distance_8"
         app:centerTextColor="@color/colorWhite"
-        app:centerTitle="消息"
+        app:centerTitle="消息中心"
         app:leftDrawble="@mipmap/ic_back" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/my_message_cl_system"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="@dimen/distance_10"
+        android:background="@drawable/rl_white_bg"
+        android:clickable="true"
+        tools:ignore="Suspicious0dp">
+
+        <ImageView
+            android:id="@+id/my_img_xitong"
+            android:layout_width="@dimen/distance_24"
+            android:layout_height="@dimen/distance_24"
+            android:layout_marginLeft="@dimen/distance_16"
+            android:src="@mipmap/xitongxiaoxi"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/distance_16"
+            android:text="系统消息"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/font_16"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/my_img_xitong"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/message_tv_system_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/distance_4"
+            android:text="一天前"
+            android:layout_marginTop="@dimen/distance_4"
+            android:textColor="@color/color_grey0"
+            android:textSize="@dimen/font_12"
+            app:layout_constraintBottom_toTopOf="@id/message_tv_system_number"
+            app:layout_constraintLeft_toLeftOf="@id/message_tv_system_number"
+            app:layout_constraintRight_toRightOf="@id/message_tv_system_number"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:layout_marginTop="@dimen/distance_4"
+            android:id="@+id/message_tv_system_number"
+            android:layout_width="@dimen/distance_20"
+            android:layout_height="@dimen/distance_20"
+            android:layout_marginRight="@dimen/distance_16"
+            android:background="@drawable/bg_orange_oval"
+            android:gravity="center"
+            android:text="99+"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/font_10"
+            app:layout_constraintTop_toBottomOf="@id/message_tv_system_time"
+            app:layout_constraintRight_toLeftOf="@id/aty_my_message_next"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/aty_my_message_next"
+            android:layout_width="@dimen/distance_20"
+            android:layout_height="@dimen/distance_20"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/distance_16"
+            android:src="@mipmap/arrows_grey"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="RtlHardcoded" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/distance_1"
+            android:layout_alignParentBottom="true"
+            android:background="@color/main_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:ignore="MissingConstraints" />
+    </android.support.constraint.ConstraintLayout>
+
+    <RelativeLayout
+        android:id="@+id/my_message_rl_comment"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/distance_50"
+        android:background="@drawable/rl_white_bg"
+        android:clickable="true"
+        tools:ignore="Suspicious0dp">
+
+        <ImageView
+            android:id="@+id/my_img_fabu"
+            android:layout_width="@dimen/distance_24"
+            android:layout_height="@dimen/distance_24"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/distance_16"
+            android:src="@mipmap/pinglun" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/distance_16"
+            android:layout_toEndOf="@id/my_img_fabu"
+            android:layout_toRightOf="@id/my_img_fabu"
+            android:text="评论"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/font_16" />
+
+        <ImageView
+            android:layout_width="@dimen/distance_20"
+            android:layout_height="@dimen/distance_20"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/distance_16"
+            android:paddingLeft="@dimen/distance_10"
+            android:paddingTop="@dimen/distance_2"
+            android:paddingBottom="@dimen/distance_2"
+            android:src="@mipmap/arrows_grey" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/distance_1"
+            android:layout_alignParentBottom="true"
+            android:background="@color/main_bg" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/my_message_rl_like"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/distance_50"
+        android:background="@drawable/rl_white_bg"
+        android:clickable="true"
+        tools:ignore="Suspicious0dp">
+
+        <ImageView
+            android:id="@+id/my_img_like"
+            android:layout_width="@dimen/distance_24"
+            android:layout_height="@dimen/distance_24"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/distance_16"
+            android:src="@mipmap/dianzan" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/distance_16"
+            android:layout_toEndOf="@id/my_img_like"
+            android:layout_toRightOf="@id/my_img_like"
+            android:text="赞"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/font_16" />
+
+        <ImageView
+            android:layout_width="@dimen/distance_20"
+            android:layout_height="@dimen/distance_20"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/distance_16"
+            android:paddingLeft="@dimen/distance_10"
+            android:paddingTop="@dimen/distance_2"
+            android:paddingBottom="@dimen/distance_2"
+            android:src="@mipmap/arrows_grey" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/distance_1"
+            android:layout_alignParentBottom="true"
+            android:background="@color/main_bg" />
+    </RelativeLayout>
 </LinearLayout>

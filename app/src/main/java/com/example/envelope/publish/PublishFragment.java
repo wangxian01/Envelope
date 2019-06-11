@@ -1,24 +1,17 @@
 package com.example.envelope.publish;
 
 import android.content.Intent;
-import android.content.pm.ActivityInfo;
-import android.graphics.Color;
-import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
 
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.envelope.R;
 import com.example.envelope.utils.ToastUtil;
@@ -163,7 +156,7 @@ public class PublishFragment extends Fragment {
                                 .previewEggs(true)// 预览图片时 是否增强左右滑动图片体验(图片滑动一半即可看到上一张是否选中) true or false
                                 .forResult(PictureConfig.CHOOSE_REQUEST);//结果回调onActivityResult code
                     } else {
-
+                        ToastUtil.showShort(getActivity(),"只能上传九张");
                     }
                 })
                 .onDenied(permissions -> {
