@@ -58,7 +58,8 @@
         android:layout_height="@dimen/distance_50"
         android:background="@drawable/rl_white_bg"
         android:clickable="true"
-        tools:ignore="Suspicious0dp">
+        tools:ignore="Suspicious0dp"
+        android:focusable="true">
 
         <TextView
             android:id="@+id/application_tv_merchant_category"

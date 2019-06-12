@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    android:paddingTop="@dimen/distance_6"
+    android:paddingBottom="@dimen/distance_6"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/item_details_img_picture"
+        android:layout_width="@dimen/distance_64"
+        android:layout_height="@dimen/distance_64"
+        android:layout_marginTop="@dimen/distance_6"
+        android:src="@mipmap/ico_red_start"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/item_order_view_linear" />
+
+    <TextView
+        android:id="@+id/item_details_tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/distance_6"
+        android:layout_marginTop="@dimen/distance_12"
+        android:text="新鲜现切水果"
+        android:textColor="@color/color_grey0"
+        android:textSize="@dimen/font_14"
+        app:layout_constraintLeft_toRightOf="@id/item_details_img_picture"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/item_details_tv_specification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/distance_6"
+        android:text="300g"
+        android:textColor="@color/color_grey0"
+        android:textSize="@dimen/font_14"
+        app:layout_constraintLeft_toRightOf="@id/item_details_img_picture"
+        app:layout_constraintTop_toBottomOf="@id/item_details_tv_name" />
+
+    <TextView
+        android:id="@+id/item_order_tv_product_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/distance_6"
+        android:text="¥ 12"
+        android:textColor="@color/orange"
+        android:textSize="@dimen/font_14"
+        app:layout_constraintTop_toBottomOf="@id/item_details_tv_specification"
+        app:layout_constraintLeft_toRightOf="@id/item_details_img_picture" />
+</android.support.constraint.ConstraintLayout>

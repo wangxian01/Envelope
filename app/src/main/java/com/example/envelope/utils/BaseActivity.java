@@ -25,9 +25,6 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
         super.onCreate(savedInstanceState);
         myLog("-->onCreate()");
         initImmersionBar();
-//        initData();
-//        initView();
-//        initEvent();
     }
 
     /**

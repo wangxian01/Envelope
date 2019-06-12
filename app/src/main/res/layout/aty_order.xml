@@ -1,51 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:orientation="vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/default_bg"
+    android:orientation="vertical"
     tools:context=".my.order.OrderActivity">
-
-    <!--<RelativeLayout-->
-        <!--android:background="@color/colorOrange"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="@dimen/distance_40">-->
-
-        <!--<ImageView-->
-            <!--android:paddingLeft="@dimen/distance_16"-->
-            <!--android:paddingRight="@dimen/distance_6"-->
-            <!--android:id="@+id/order_img_back"-->
-            <!--android:src="@mipmap/ic_back"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="match_parent" />-->
-
-        <!--<TextView-->
-            <!--android:text="我的订单"-->
-            <!--android:textColor="@color/colorWhite"-->
-            <!--android:textSize="@dimen/font_16"-->
-            <!--android:layout_centerVertical="true"-->
-            <!--android:layout_centerHorizontal="true"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content" />-->
-    <!--</RelativeLayout>-->
 
     <com.example.envelope.utils.TitlebarUtile
         android:id="@+id/order_title"
         android:layout_width="match_parent"
         android:layout_height="48dp"
+        android:paddingLeft="@dimen/distance_8"
         android:background="@color/orange"
-        app:centerTitle="我的订单"
         app:centerTextColor="@color/colorWhite"
+        app:centerTitle="我的订单"
         app:leftDrawble="@mipmap/ic_back" />
 
     <net.lucode.hackware.magicindicator.MagicIndicator
-        android:layout_marginTop="@dimen/distance_6"
         android:id="@+id/order_magic_indicator"
         android:layout_width="match_parent"
         android:layout_height="@dimen/distance_40"
+        android:layout_marginTop="@dimen/distance_6"
         android:background="@color/colorWhite" />
 
     <android.support.v4.view.ViewPager

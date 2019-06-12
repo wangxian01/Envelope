@@ -13,6 +13,7 @@
         android:id="@+id/shopping_title"
         android:layout_width="match_parent"
         android:layout_height="48dp"
+        android:paddingLeft="@dimen/distance_8"
         android:background="@color/orange"
         app:centerTitle="购物车"
         app:centerTextColor="@color/colorWhite"

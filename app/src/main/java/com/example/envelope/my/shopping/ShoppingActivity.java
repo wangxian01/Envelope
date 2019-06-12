@@ -12,7 +12,7 @@ import butterknife.ButterKnife;
 
 /**
  * 购物车页面
- * Created by wangxian on 2019/6/10
+ * Created by wangxian on 2019/6/12
  **/
 public class ShoppingActivity extends BaseActivity {
 
@@ -39,8 +39,7 @@ public class ShoppingActivity extends BaseActivity {
 
     @Override
     public void initView() {
-        //设置标题文字大小
-        shoppingTitle.setTitleSize(16);
+
     }
 
     @Override
