@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:width="@dimen/distance_20"
+        android:height="@dimen/distance_20"
+        android:drawable="@drawable/ic_choose_null"/>
+
+</layer-list>

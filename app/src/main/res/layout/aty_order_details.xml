@@ -31,8 +31,6 @@
             android:orientation="vertical"
             tools:context=".my.order.OrderDetailsActivity">
 
-
-
             <android.support.constraint.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/distance_80"

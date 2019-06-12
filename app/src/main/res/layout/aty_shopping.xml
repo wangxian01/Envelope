@@ -19,5 +19,28 @@
         app:centerTextColor="@color/colorWhite"
         app:leftDrawble="@mipmap/ic_back" />
 
+    <ScrollView
+        android:fadingEdge="none"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/shopping_car_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/distance_16"
+                android:layout_marginRight="@dimen/distance_16"
+                android:overScrollMode="never"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="@id/item_order_view_linear" />
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

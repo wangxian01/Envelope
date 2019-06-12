@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:padding="@dimen/distance_6"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <CheckBox
+        android:id="@+id/item_shopping_checkbox_merchant_choose"
+        android:layout_width="22dp"
+        android:layout_height="23dp"
+        android:button="@drawable/checkbox_shopping_style"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/item_order_view_linear"/>
+
+    <com.example.envelope.utils.CircleImageView
+        android:id="@+id/item_shopping_img_merchant_hand"
+        android:layout_marginLeft="@dimen/distance_8"
+        android:layout_width="@dimen/distance_26"
+        android:layout_height="@dimen/distance_26"
+        android:src="@mipmap/ico_red_start"
+        app:layout_constraintLeft_toRightOf="@+id/item_shopping_checkbox_merchant_choose"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/item_shopping_tv_merchant_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/distance_12"
+        android:text="一家水果店"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintBottom_toBottomOf="@+id/item_order_view_linear"
+        app:layout_constraintLeft_toRightOf="@id/item_shopping_img_merchant_hand"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/item_order_view_linear"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/distance_1"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/distance_4"
+        android:background="@color/main_bg"
+        app:layout_constraintTop_toBottomOf="@id/item_shopping_img_merchant_hand" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/shopping_car_merchant_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/distance_16"
+        android:layout_marginRight="@dimen/distance_16"
+        android:overScrollMode="never"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@id/item_order_view_linear" />
+
+</android.support.constraint.ConstraintLayout>
