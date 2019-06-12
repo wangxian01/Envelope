@@ -106,7 +106,7 @@ public class OrderDetailsActivity extends BaseActivity {
     @Override
     public void initData() {
         orderBeanList = new ArrayList<>();
-        for (int i = 1; i < 4; i++) {
+        for (int i = 1; i < 6; i++) {
             OrderBean orderBean = new OrderBean();
             orderBean.setMerchant("新鲜现切水果" + i);
             orderBean.setMoneg("¥" + i*10);
